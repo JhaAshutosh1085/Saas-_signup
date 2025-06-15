@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: saas-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run dev
+    envVars:
+      - key: MONGO_URI
+        value: your_mongo_connection_string_here
+      - key: EMAIL
+        value: your_email_here
+      - key: PASSWORD
+        value: your_email_password_here
